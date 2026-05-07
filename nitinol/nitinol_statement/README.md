@@ -36,4 +36,4 @@ $$
 c_{\text{agua}} = 4.18\,\frac{\text{J}}{\text{g}\cdot^\circ C}
 $$
 
-Suponiendo que no hay pérdidas de calor al ambiente, ¿cuál debe ser la **temperatura mínima inicial del agua** para que el clip alcance \(A_f\) y recupere su forma original?
+Suponiendo que no hay pérdidas de calor al ambiente, ¿cuál debe ser la **temperatura mínima inicial del agua** para que el clip alcance $(A_f$) y recupere su forma original?
