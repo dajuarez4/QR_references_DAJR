@@ -2,39 +2,39 @@
 
 Un clip de Nitinol deformado se encuentra inicialmente a temperatura ambiente:
 
-\[
-T_{i,\text{clip}} = 25^\circ C
-\]
+$$
+T_{i,\mathrm{clip}} = 25^\circ \mathrm{C}
+$$
 
 Para recuperar su forma original, el clip debe alcanzar su temperatura final de austenita:
 
-\[
-A_f = 60^\circ C
-\]
+$$
+A_f = 60^\circ \mathrm{C}
+$$
 
 El clip tiene una masa de:
 
-\[
-m_{\text{clip}} = 2.0\,\text{g}
-\]
+$$
+m_{\mathrm{clip}} = 2.0\,\mathrm{g}
+$$
 
 y un calor específico de:
 
-\[
-c_{\text{NiTi}} = 0.32\,\frac{\text{J}}{\text{g}\cdot^\circ C}
-\]
+$$
+c_{\mathrm{NiTi}} = 0.32\,\frac{\mathrm{J}}{\mathrm{g}\cdot^\circ \mathrm{C}}
+$$
 
 El clip se coloca dentro de:
 
-\[
-m_{\text{agua}} = 100\,\text{g}
-\]
+$$
+m_{\mathrm{agua}} = 100\,\mathrm{g}
+$$
 
 de agua caliente, cuyo calor específico es:
 
-\[
-c_{\text{agua}} = 4.18\,\frac{\text{J}}{\text{g}\cdot^\circ C}
-\]
+$$
+c_{\mathrm{agua}} = 4.18\,\frac{\mathrm{J}}{\mathrm{g}\cdot^\circ \mathrm{C}}
+$$
 
 Suponga que no hay pérdidas de calor al ambiente.
 
@@ -44,9 +44,9 @@ Suponga que no hay pérdidas de calor al ambiente.
 
 La condición física es:
 
-\[
-T_{\text{agua}} > A_f
-\]
+$$
+T_{\mathrm{agua}} > A_f
+$$
 
 ---
 
@@ -54,90 +54,90 @@ T_{\text{agua}} > A_f
 
 El clip debe alcanzar:
 
-\[
-T_f = A_f = 60^\circ C
-\]
+$$
+T_f = A_f = 60^\circ \mathrm{C}
+$$
 
 El calor ganado por el clip de Nitinol es:
 
-\[
-Q_{\text{clip}} = m_{\text{clip}} c_{\text{NiTi}}(T_f - T_{i,\text{clip}})
-\]
+$$
+Q_{\mathrm{clip}} = m_{\mathrm{clip}} c_{\mathrm{NiTi}}(T_f - T_{i,\mathrm{clip}})
+$$
 
 Sustituyendo los valores:
 
-\[
-Q_{\text{clip}} = (2.0)(0.32)(60 - 25)
-\]
+$$
+Q_{\mathrm{clip}} = (2.0)(0.32)(60 - 25)
+$$
 
-\[
-Q_{\text{clip}} = (2.0)(0.32)(35)
-\]
+$$
+Q_{\mathrm{clip}} = (2.0)(0.32)(35)
+$$
 
-\[
-Q_{\text{clip}} = 22.4\,\text{J}
-\]
+$$
+Q_{\mathrm{clip}} = 22.4\,\mathrm{J}
+$$
 
 Este calor proviene del agua caliente:
 
-\[
-Q_{\text{agua}} = m_{\text{agua}} c_{\text{agua}}(T_{\text{agua}} - T_f)
-\]
+$$
+Q_{\mathrm{agua}} = m_{\mathrm{agua}} c_{\mathrm{agua}}(T_{\mathrm{agua}} - T_f)
+$$
 
 Por conservación de energía:
 
-\[
-Q_{\text{agua}} = Q_{\text{clip}}
-\]
+$$
+Q_{\mathrm{agua}} = Q_{\mathrm{clip}}
+$$
 
 Entonces:
 
-\[
-m_{\text{agua}} c_{\text{agua}}(T_{\text{agua}} - T_f) = 22.4
-\]
+$$
+m_{\mathrm{agua}} c_{\mathrm{agua}}(T_{\mathrm{agua}} - T_f) = 22.4
+$$
 
 Sustituyendo:
 
-\[
-(100)(4.18)(T_{\text{agua}} - 60) = 22.4
-\]
+$$
+(100)(4.18)(T_{\mathrm{agua}} - 60) = 22.4
+$$
 
-\[
-418(T_{\text{agua}} - 60) = 22.4
-\]
+$$
+418(T_{\mathrm{agua}} - 60) = 22.4
+$$
 
-\[
-T_{\text{agua}} - 60 = \frac{22.4}{418}
-\]
+$$
+T_{\mathrm{agua}} - 60 = \frac{22.4}{418}
+$$
 
-\[
-T_{\text{agua}} - 60 = 0.0536
-\]
+$$
+T_{\mathrm{agua}} - 60 = 0.0536
+$$
 
-\[
-T_{\text{agua}} = 60.0536^\circ C
-\]
+$$
+T_{\mathrm{agua}} = 60.0536^\circ \mathrm{C}
+$$
 
 ---
 
 # Respuesta final
 
-\[
-\boxed{T_{\text{agua}} \approx 60.1^\circ C}
-\]
+$$
+\boxed{T_{\mathrm{agua}} \approx 60.1^\circ \mathrm{C}}
+$$
 
 Como:
 
-\[
-T_{\text{agua}} > A_f
-\]
+$$
+T_{\mathrm{agua}} > A_f
+$$
 
 el clip de Nitinol alcanza la fase austenítica y recupera su forma original.
 
 En un experimento real, el agua debería estar más caliente, por ejemplo:
 
-\[
-\boxed{T_{\text{agua}} \approx 70^\circ C}
-\]
+$$
+\boxed{T_{\mathrm{agua}} \approx 70^\circ \mathrm{C}}
+$$
 
 porque parte del calor se pierde en el vaso, el aire y el ambiente.
