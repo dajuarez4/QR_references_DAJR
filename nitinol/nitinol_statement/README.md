@@ -24,7 +24,7 @@ $$
 c_{\text{NiTi}} = 0.32\,\frac{\text{J}}{\text{g}\cdot^\circ C}
 $$
 
-El clip se coloca dentro de \(100\,\text{g}\) de agua caliente:
+El clip se coloca dentro de \(100\ g\) de agua caliente:
 
 $$
 m_{\text{agua}} = 100\,\text{g}
