@@ -63,18 +63,18 @@ This fixes the nuclear interaction parameters consistently with the ground-state
 At finite temperature, the quantum EoS includes Fermi–Dirac statistics:
 
 $$
-P(T,\mu)=p^{\mathrm{id}}(T,\mu^*)+n^2u’(n),
+P(T,\mu)=p^{\mathrm{id}}(T,\mu^{*})+n^2u’(n),
 $$
 
 $$
-n(T,\mu)=(1-bn)n^{\mathrm{id}}(T,\mu^*),
+n(T,\mu)=(1-bn)n^{\mathrm{id}}(T,\mu^{*}),
 $$
 
 $$
-\epsilon(T,\mu)=(1-bn)\epsilon^{\mathrm{id}}(T,\mu^*)+nu(n).
+\epsilon(T,\mu)=(1-bn)\epsilon^{\mathrm{id}}(T,\mu^{*})+nu(n).
 $$
 
-Here $\mu^$ is the effective chemical potential and $u’(n)=du/dn$. For each trial $(T,n)$, solve the ideal-density relation for $\mu^$ using an iterative root finder, then calculate $P$ and $\epsilon$. Repeat to construct the full quantum EoS [1, 2].
+Here $\mu^{}$ is the effective chemical potential and $u’(n)=du/dn$. For each trial $(T,n)$, solve the ideal-density relation for $\mu^{}$ using an iterative root finder, then calculate $P$ and $\epsilon$. Repeat to construct the full quantum EoS [1, 2].
 
 4. Incompressibility and Liquid-Gas Critical Point
 
@@ -84,7 +84,7 @@ $$
 K_0=9\left.\frac{\partial P}{\partial n}\right|_{T=0,n=n_0}.
 $$
 
-Find the critical point $ (T_c,n_c) $ from the horizontal-inflection conditions:
+Find the critical point $(T_c,n_c)$ from the horizontal-inflection conditions:
 
 $$
 \left.\frac{\partial P}{\partial n}\right|{T_c,n_c}=0,
