@@ -1,1 +1,150 @@
-hello
+Numerical Procedure: Real-Gas Models and Quarkyonic Matter
+
+This work investigates the nuclear liquid-gas critical point and the equation of state (EoS) of quarkyonic matter using five real-gas models. The nucleonic interactions are described through the van der Waals excluded-volume prescription and different attractive mean-field potentials.
+
+1. Selection of Real-Gas Models
+
+We employ the van der Waals excluded-volume prescription to describe short-range repulsive interactions:
+
+$$
+f_{\mathrm{EV}}(n)=1-bn,
+$$
+
+where $b$ represents the excluded-volume parameter.
+
+Five attractive mean-field models are considered:
+
+Model	Attractive potential $u(n)$
+van der Waals (vdW)	$-an$
+Redlich-Kwong-Soave (RKS)	$-\frac{a}{b}\ln(1+bn)$
+Peng-Robinson (PR)	$-\frac{a}{2\sqrt{2}b}\ln\left(\frac{1+(1+\sqrt{2})bn}{1+(1-\sqrt{2})bn}\right)$
+Clausius	$-\frac{an}{1+cn}$
+Dieterici	$-\frac{an^{\alpha-1}}{\alpha-1}$
+
+Here, $a$ controls the attractive interaction, while $c$ and $\alpha$ are additional parameters for the Clausius and Dieterici models, respectively.
+
+The classical pressure takes the general form:
+
+$$
+P(T,n)=\frac{nT}{1-bn}+n^2u’(n).
+$$
+
+These models allow us to investigate how different attractive interactions affect nuclear incompressibility and the liquid-gas critical point [1,2,5].
+
+2. Nuclear Matter Saturation Conditions
+
+The interaction parameters $a$ and $b$ are determined by imposing the empirical properties of symmetric nuclear matter at zero temperature:
+
+$$
+n_0=0.16\ \mathrm{fm}^{-3},
+\qquad P(0,n_0)=0,
+$$
+
+$$
+\frac{\epsilon(0,n_0)}{n_0}-m_N=-16\ \mathrm{MeV}.
+$$
+
+The numerical procedure is:
+
+1. Select a real-gas model and fix its additional parameter $c$ or $\alpha$, when applicable.
+2. Choose a trial excluded-volume parameter $b$.
+3. Calculate the effective ideal Fermi-gas density:
+    $$
+    n^{\mathrm{id}}=\frac{n_0}{1-bn_0}.
+    $$
+4. Evaluate the corresponding Fermi momentum, ideal pressure, and energy density.
+5. Determine $a$ from the zero-pressure condition.
+6. Adjust $b$ using a bisection root-finding algorithm until the binding-energy constraint is satisfied.
+7. Repeat for the selected models and parameter values.
+
+This procedure determines the interaction parameters while reproducing the nuclear ground-state properties [2,5].
+
+3. Quantum Equation of State
+
+To incorporate Fermi statistics, the EoS is formulated in the grand canonical ensemble.
+
+The pressure, particle density, and energy density are given by
+
+$$
+P(T,\mu)=p^{\mathrm{id}}(T,\mu^*)+n^2u’(n),
+$$
+
+$$
+n(T,\mu)=(1-bn)n^{\mathrm{id}}(T,\mu^*),
+$$
+
+$$
+\epsilon(T,\mu)=(1-bn)\epsilon^{\mathrm{id}}(T,\mu^*)+nu(n).
+$$
+
+The effective chemical potential $\mu^*$ accounts for the excluded-volume and attractive mean-field interactions.
+
+For each temperature and density, $\mu^*$ is obtained numerically through a self-consistent iterative solver, allowing the construction of the quantum EoS [1,2].
+
+4. Nuclear Incompressibility and Critical Point
+
+After determining the interaction parameters, the nuclear incompressibility is calculated as
+
+$$
+K_0=9\left.\frac{\partial P}{\partial n}\right|_{T=0,n=n_0}.
+$$
+
+The derivative is evaluated numerically using centered finite differences.
+
+The liquid-gas critical point is determined by solving
+
+$$
+\left.\frac{\partial P}{\partial n}\right|_{T_c,n_c}=0,
+$$
+
+$$
+\left.\frac{\partial^2P}{\partial n^2}\right|_{T_c,n_c}=0.
+$$
+
+The computational procedure consists of:
+
+1. Constructing finite-temperature pressure isotherms.
+2. Performing a coarse search over temperature and density to estimate the critical point.
+3. Calculating the first and second pressure derivatives numerically.
+4. Refining the critical temperature $T_c$ and density $n_c$ using a damped nonlinear solver.
+5. Repeating the calculation for the five real-gas models.
+
+This allows us to study the correlations between nuclear incompressibility, critical temperature, and critical density [2,5].
+
+5. Quarkyonic Equation of State
+
+The calibrated nuclear interactions are incorporated into the quarkyonic matter description.
+
+In the quarkyonic configuration, quarks occupy low-momentum states while confined nucleons occupy a higher-momentum shell, consistent with the Pauli exclusion principle.
+
+The numerical procedure is:
+
+1. Construct the quarkyonic energy density using the calibrated nucleonic EoS.
+2. Introduce the infrared regulator $\Lambda=305\ \mathrm{MeV}$.
+3. Minimize the total energy density with respect to the quark and nucleon momentum variables, $k_Q$ and $k_B+\Delta$.
+4. Determine the equilibrium EoS and calculate the pressure and squared speed of sound:
+    $$
+    P=n_B^2\frac{d}{dn_B}\left(\frac{\epsilon}{n_B}\right),
+    \qquad
+    c_s^2=\frac{dP}{d\epsilon}.
+    $$
+5. Solve the Tolman-Oppenheimer-Volkoff (TOV) equations using the resulting EoS and a BPS crust to obtain the neutron-star mass-radius relation.
+
+This provides a connection between nuclear matter properties, the quarkyonic transition, and neutron-star structure [3–5].
+
+References
+
+[1] V. Vovchenko, D. V. Anchishkin, and M. I. Gorenstein, Particle Number Fluctuations for van der Waals Equation of State, Journal of Physics A: Mathematical and Theoretical 48, 305001 (2015).
+https://arxiv.org/abs/1501.03785
+
+[2] V. Vovchenko, D. V. Anchishkin, and M. I. Gorenstein, Van der Waals Equation of State with Fermi Statistics for Nuclear Matter, Physical Review C 91, 064314 (2015).
+https://doi.org/10.1103/PhysRevC.91.064314
+
+[3] R. V. Poberezhnyuk, H. Stoecker, and V. Vovchenko, Quantum van der Waals theory meets quarkyonic matter (2023).
+https://arxiv.org/abs/2307.13532
+
+[4] Quantum van der Waals quarkyonic matter at nonzero isospin asymmetry, Physical Review C 111, 025803 (2025).
+https://doi.org/10.1103/PhysRevC.111.025803
+
+[5] Correlations between nuclear incompressibility, liquid-gas critical point, and quarkyonic transition (2025).
+https://arxiv.org/abs/2501.16225
